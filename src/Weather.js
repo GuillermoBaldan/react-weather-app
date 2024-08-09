@@ -17,7 +17,7 @@ const Weather = () => {
 
     try {
       const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${"4e6b82d3b35304e55c97709bdd49e3cc"}&units=metric`
       );
       if (!response.ok) {
         throw new Error('City not found');
@@ -33,7 +33,7 @@ const Weather = () => {
 
   return (
     <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      <h1>Weather App</h1>
+      <h1>React Weather App</h1>
       <input
         type="text"
         value={city}
